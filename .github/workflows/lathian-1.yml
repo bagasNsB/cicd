@@ -4,10 +4,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: install update
-    - run: sudo apt update -y
-    - name: Install dependencies
-    run: npm install 
-    - name: Run tests
-    run: npm test
+      - uses: actions/checkout@v3
+      - name: install update
+      - run: sudo apt update -y
+      - name: Install dependencies
+        run: npm install 
+      - name: Run tests
+        run: npm test
