@@ -1,12 +1,16 @@
-name: Run Tests
-on: [pull_request]
+name: Latihan 1
+on: workflow_dispatch
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Install update
+      - name: install update
         run: sudo apt update -y
+      - name: install nginx
+        run: sudo apt install nginx -y
+      - name: Tes landing page nginx
+        run: sudo systemctl start nginx && curl localhost
       - name: Install dependencies
         run: npm install 
       - name: Run tests
